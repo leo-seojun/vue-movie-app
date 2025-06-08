@@ -26,9 +26,13 @@ module.exports = {
   // 결과물(번들)을 반환하는 설정
   output: {
     // 주석은 기본값!, `__dirname`은 현재 파일의 위치를 알려주는 NodeJS 전역 변수
-    // path: path.resolve(__dirname, 'dist'),
-    // filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    publicPath: '/',
     clean: true
+  },
+  devServer: {
+    historyApiFallback: true, // SPA 라우팅용
   },
 
   // 모듈 처리 방식을 설정
