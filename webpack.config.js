@@ -32,7 +32,10 @@ module.exports = {
     clean: true
   },
   devServer: {
-    historyApiFallback: true, // SPA 라우팅용
+    host: 'localhost',
+    port: 8080,
+    hot: true,
+    historyApiFallback: true // SPA 라우팅용
   },
 
   // 모듈 처리 방식을 설정
@@ -79,11 +82,4 @@ module.exports = {
     }),
     new VueLoaderPlugin()
   ],
-
-  // 개발 서버 옵션
-  devServer: {
-    host: 'localhost',
-    port: 8080,
-    hot: true
-  }
 }
